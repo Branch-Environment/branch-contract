@@ -406,7 +406,7 @@ contract BRANCH is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
     
-    address payable private marketingWallet = payable(0x0997c49a77Bc7774a6273f5f7a5134F165c9FdF8); // Marketing Wallet
+    address payable private marketingWallet = payable(0xa832976b5bF1732154ec888B988dc8051F4DA8b6); // Marketing Wallet
     address payable private crowdfundWallet = payable(0x8222ea585043C5Cd5207C734Bd87193611c8E9a7); // Crowd Fund Wallet
     address payable private devWallet = payable (0xD72BdAB2A8cE4b682f6D9647A65daA1E5250Dd11); // Dev Wallet
     mapping (address => uint256) private _rOwned;
@@ -430,7 +430,7 @@ contract BRANCH is Context, IERC20, Ownable {
     uint8 private _decimals = 8;
     
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 100000000000 * 10**_decimals;
+    uint256 private _tTotal = 50000000000 * 10**_decimals;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
@@ -682,7 +682,7 @@ contract BRANCH is Context, IERC20, Ownable {
         reflectionFee=_buyReflectionFee;
 
         if(tradingOpen && to == uniswapV2Pair) { //sell
-            currenttotalFee= _sellLiquidityFee.add(_sellMarketingFee).add(_sellDevFee);
+            currenttotalFee= _sellLiquidityFee.add(_sellMarketingFee).add(_sellDevFee).add(crowdfundfee);
             reflectionFee=_sellReflectionFee;
         }
         
@@ -936,9 +936,10 @@ contract BRANCH is Context, IERC20, Ownable {
         _isExcludedFromFee[account] = false;
     }
     
-    function setWallets(address _marketingWallet,address _devWallet) external onlyOwner() {
+    function setWallets(address _marketingWallet,address _devWallet,address _crowdfundWallet) external onlyOwner() {
         marketingWallet = payable(_marketingWallet);
         devWallet = payable(_devWallet);
+        crowdfundWallet = payable(_crowdfundWallet);
     }
 
 

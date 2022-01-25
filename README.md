@@ -1,2 +1,14 @@
 # branch-contract
-https://bscscan.com/address/0x18C3100170896fbC71e125559cf222d4969198b8#code
+https://bscscan.com/address/0x8C8d463B9D531Cf77c56d1ca251b408286C1E34D#code
+
+██████╗░██████╗░░█████╗░███╗░░██╗░█████╗░██╗░░██╗
+██╔══██╗██╔══██╗██╔══██╗████╗░██║██╔══██╗██║░░██║
+██████╦╝██████╔╝███████║██╔██╗██║██║░░╚═╝███████║
+██╔══██╗██╔══██╗██╔══██║██║╚████║██║░░██╗██╔══██║
+██████╦╝██║░░██║██║░░██║██║░╚███║╚█████╔╝██║░░██║
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝
+
+Welcome to Branch Token. The first community driven crypto crowd funding platform. 
+
+t.me/BranchEnvironment
+BranchEnvironment.com
