@@ -427,17 +427,17 @@ contract BRANCH is Context, IERC20, Ownable {
    
     address DEAD = 0x000000000000000000000000000000000000dEaD;
 
-    uint8 private _decimals = 8;
+    uint8 private _decimals = 9;
     
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 50000000000 * 10**_decimals;
+    uint256 private _tTotal = 7500000000 * 10**_decimals;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
     string private _name = "BRANCH";
     string private _symbol = "BRANCH";
 
-    uint256 public _maxWalletToken = _tTotal.div(1000).mul(5); //0.5%
+    uint256 public _maxWalletToken = _tTotal.div(1000).mul(20); //2%
 
     uint256 public _buyLiquidityFee = 10; //1%
     uint256 public _buyDevFee = 15;    //1.5%
@@ -460,7 +460,7 @@ contract BRANCH is Context, IERC20, Ownable {
         liquidityFee.add(marketingFee).add(devFee).add(crowdfundfee);
     uint256 private currenttotalFee = totalFee;
     
-    uint256 public swapThreshold = _tTotal.div(10000).mul(5); //0.05%
+    uint256 public swapThreshold = _tTotal.div(10000).mul(5); //0.005%
    
     IUniswapV2Router02 public uniswapV2Router;
     address public uniswapV2Pair;
